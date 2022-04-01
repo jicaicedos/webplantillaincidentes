@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/css/styles.css">
+  <link rel="stylesheet" href="../src/css/estilos.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<script>
+
+  var eventoControlado = false;
+
+  // let opciones = 'MENU';
+  // console.log(opciones);
+
+  window.onload = function () {
+    document.onkeypress = mostrarInformacionCaracter;
+    document.onkeyup = mostrarInformacionTecla;
+  }
+
+  function mostrarInformacionCaracter(evObject) {
+    var elCaracter = String.fromCharCode(evObject.which);
+    control.innerHTML += elCaracter;
+    eventoControlado = true;
+  }
+
+  function mostrarInformacionTecla(evObject) {
+    eventoControlado = false;
+  }
+</script>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="">Plantillas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./compartidos.html">Compartidos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./procedimientos.html">Procedimientos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./software.html">Software</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./cuentas.html">Cuentas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"
+                href="https://www.sena.edu.co/es-co/Noticias/PublishingImages/mail/firma10.aspx">Firma</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <br>
+    <div class="card">
+      <div class="card-header">
+        Inicio
+      </div>
+      <div class="card-body">
+        <p>Se realizan los siguientes procesos: Se procede a gestionar la solicitud.</p>
+        <hr>
+        <h5 class="card-title">Mensaje</h5>
+        <form action="./mensaje.html" method="post">
+          <p id="texto">
+            <span id="texto1">Cordial saludo, para solucionar </span>
+            <input class="form-control" type="text" id="asunto" placeholder="Digitar asunto"><span id="texto2"> se
+              ejecutó verificación en sitio </span>
+            <textarea class="form-control" id="mensaje" rows="3"></textarea>
+            <span id="texto3">. Se realizaron pruebas con el usuario</span> <input type="text" id="usuario"
+              placeholder="Nombre del usuario" value=""><span id="texto4">, asistencia adicional al usuario, quien
+              confirma la solución a satisfacción y autorizó el cierre del requerimiento.</span>
+          <div class="form-group">
+            <button type="button" class="btn btn-primary" onclick="generarMensaje()">Generar</button>
+          </div>
+          </p>
+        </form>
+        <h4>Resultado</h4>
+        <p class="alert alert-warning" id="mensajeFinal"></p>
+      </div>
+    </div>
+    <br>
+    <hr><br>
+    <div>
+      <h2>Pendiente</h2>
+      <div>
+        <h4>Mensaje</h4>
+        <form action="">
+          <p id="pendiente">
+            <!-- texto1 -->
+            <span id="pendiente1">Se realizan los siguientes procesos: se procede a validación el día de hoy </span>
+            <!-- Fecha hoy -->
+            <input id="fechaInicio" type="date">
+            <!-- Hora -->
+            <span id="pendiente2"> siendo las </span>
+            <!-- HORA INICIO -->
+            <input id="horaIncio" type="time">
+            <!-- texto2 -->
+            <span id="pendiente3">. Se realiza el proceso de verificación del equipo, </span>
+            <!-- Procedimiento -->
+            <textarea class="form-control" id="mensajePendiente" rows="3"></textarea>
+            <!-- texto -->
+            <span id="pendiente4">se procede a contactar al usuario para poder hacer el cierre del caso, en cuál el
+              usuario informa que no se encuentra en sitio, hasta que él verifique el equipo no autoriza el cierre,
+              nos indica el usuario que vuelve a tener disponibilidad el día </span>
+            <!-- fecha final -->
+            <input type="date" id="fechaFinal">
+            <span id="pendiente5">a las </span>
+            <!-- hora final -->
+            <input type="time" id="horaFinal">
+            <span id="pendiente6">para generar su respectiva verificación. Por lo tanto, el caso queda en
+              <strong>pendiente</strong>.</span>
+          <div class="form-group">
+            <button type="button" class="btn btn-primary" onclick="generarMensajePendiente()">Generar
+              pendiente</button>
+          </div>
+          </p>
+        </form>
+        <h4>Resultado</h4>
+        <p class="alert alert-warning" id="mensajeFinalPendiente"></p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-white card-has-bg click-col"
+        style="background-image:url('https://source.unsplash.com/600x900/?computer,design');">
+        <img class="card-img d-none" src="https://source.unsplash.com/600x900/?computer,design"
+          alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+        <div class="card-img-overlay d-flex flex-column">
+          <div class="card-body">
+            <small class="card-meta mb-2">Thought Leadership</small>
+            <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur
+                dipisi?</a></h4>
+            <small><i class="far fa-clock"></i> October 15, 2020</small>
+          </div>
+          <div class="card-footer">
+            <div class="media">
+              <img class="mr-3 rounded-circle"
+                src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/male-512.png"
+                alt="Generic placeholder image" style="max-width:50px">
+              <div class="media-body">
+                <h6 class="my-0 text-white d-block">Oz COruhlu</h6>
+                <small>Director of UI/UX</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+<script src="../src/js/plantillas.js"></script>
+
+</html>
