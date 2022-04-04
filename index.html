@@ -6,341 +6,70 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/css/styles.css">
+  <link rel="stylesheet" href="./src/css/estilos.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-</head>
 
   <title>Plantillas</title>
-
-
-  <!-- OTRO JS -->
-  <script >
-
-    var eventoControlado = false;
-
-    // let opciones = 'MENU';
-    // console.log(opciones);
-
-    window.onload = function () {
-      document.onkeypress = mostrarInformacionCaracter;
-      document.onkeyup = mostrarInformacionTecla;
-    }
-
-    function mostrarInformacionCaracter(evObject) {
-      var elCaracter = String.fromCharCode(evObject.which);
-      control.innerHTML += elCaracter;
-      eventoControlado = true;
-    }
-
-    function mostrarInformacionTecla(evObject) {
-      eventoControlado = false;
-    }
-  </script>
-
+</head>
 <body>
   <!-- <div id="control"> </div> -->
-
   <div class="container">
     <!-- <h1 id="menusaludo">hello</h1> -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./pages/plantillas.html">Plantillas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./pages/compartidos.html">Compartidos</a>
-            </li>            
-            <li class="nav-item">
-              <a class="nav-link" href="./pages/procedimientos.html">Procedimientos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./pages/software.html">Software</a>
-            </li>            
-            <li class="nav-item">
-              <a class="nav-link" href="./pages/cuentas.html">Cuentas</a>
-            </li>            
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.sena.edu.co/es-co/Noticias/PublishingImages/mail/firma10.aspx">Firma</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-            aria-expanded="false" aria-controls="collapseOne">
-            Formatos
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <ul>
-              <li><a href="./public/Reporte Tecnico.xlsx">Reporte técnico</a> (Ejemplo diligenciado)</li>
-              <li><a href="./public/STIC3_COLTEL_GST_FR_ID000_Acta_Reasignación_de_Inventario.xlsx">Acta de reasignación
-                  de inventrio equipos</a> (Ejemplo diligenciado)</li>
+    <header>
+      <nav class="navbar navbar-expand navbar-light bg-light">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/plantillas.html">Plantillas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/compartidos.html">Compartidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/procedimientos.html">Procedimientos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/software.html">Software</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/cuentas.html">Cuentas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"
+                  href="https://www.sena.edu.co/es-co/Noticias/PublishingImages/mail/firma10.aspx">Firma</a>
+              </li>
             </ul>
+            <!-- <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form> -->
           </div>
         </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            Plantillas
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <h4>Inicio</h4>
-            <p>Se realizan los siguientes procesos: Se procede a gestionar la solicitud.</p>
-            <hr>
-            <h4>Mensaje</h4>
-            <form action="./mensaje.html" method="post">
-              <p id="texto">
-                <span id="texto1">Cordial saludo, para solucionar </span>
-                <input class="form-control" type="text" id="asunto" placeholder="Digitar asunto"><span id="texto2"> se
-                  ejecutó verificación en sitio </span>
-                <textarea class="form-control" id="mensaje" rows="3"></textarea>
-                <span id="texto3">. Se realizaron pruebas con el usuario</span> <input type="text" id="usuario"
-                  placeholder="Nombre del usuario" value=""><span id="texto4">, asistencia adicional al usuario, quien
-                  confirma la solución a satisfacción y autorizó el cierre del requerimiento.</span>
-              <div class="form-group">
-                <button type="button" class="btn btn-primary" onclick="generarMensaje()">Generar</button>
-              </div>
-              </p>
-            </form>
-            <h4>Resultado</h4>
-            <p class="alert alert-warning" id="mensajeFinal"></p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingSix">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-            Pendiente
-          </button>
-        </h2>
-        <div id="collapseSix" class="accordion-collapse" aria-labelledby="headingSix"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <h4>Mensaje</h4>
-            <form action="">
-              <p id="pendiente">
-                <!-- texto1 -->
-                <span id="pendiente1">Se realizan los siguientes procesos: se procede a validación el día de hoy </span>
-                <!-- Fecha hoy -->
-                <input id="fechaInicio" type="date">
-                <!-- Hora -->
-                <span id="pendiente2"> siendo las </span>
-                <!-- HORA INICIO -->
-                <input id="horaIncio" type="time">
-                <!-- texto2 -->
-                <span id="pendiente3">. Se realiza el proceso de verificación del equipo, </span>
-                <!-- Procedimiento -->
-                <textarea class="form-control" id="mensajePendiente" rows="3"></textarea>
-                <!-- texto -->
-                <span id="pendiente4">se procede a contactar al usuario para poder hacer el cierre del caso, en cuál el
-                  usuario informa que no se encuentra en sitio, hasta que él verifique el equipo no autoriza el cierre,
-                  nos indica el usuario que vuelve a tener disponibilidad el día </span>
-                <!-- fecha final -->
-                <input type="date" id="fechaFinal">
-                <span id="pendiente5">a las </span>
-                <!-- hora final -->
-                <input type="time" id="horaFinal">
-                <span id="pendiente6">para generar su respectiva verificación. Por lo tanto, el caso queda en
-                  <strong>pendiente</strong>.</span>
-              <div class="form-group">
-                <button type="button" class="btn btn-primary" onclick="generarMensajePendiente()">Generar
-                  pendiente</button>
-              </div>
-              </p>
-            </form>
-            <h4>Resultado</h4>
-            <p class="alert alert-warning" id="mensajeFinalPendiente"></p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingVariableEntorno">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseVariableEntorno" aria-expanded="false" aria-controls="collapseVariableEntorno">
-            Variables del Entorno
-          </button>
-        </h2>
-        <div id="collapseVariableEntorno" class="accordion-collapse collapse" aria-labelledby="headingVariableEntorno"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p><strong>Varibales de entorno autodesk 2020</strong></p>
-            <br>
-            <p><strong>NOMBRE </strong>ADSKFLEX_LICENSE_FILE</p>
-            <p><strong>VALOR </strong>@VSPDAPAUTOD01; @172.16.2.122</p>
-            <hr>
-            <p><strong>NOMBRE </strong>FLEXLM_TIMEOUT</p>
-            <p><strong>VALOR </strong>3000000</p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Compartidos
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p><a href="https://docs.google.com/spreadsheets/d/1OHEWxJpP-cS8LbWkOKp8CHBDEMrowcbWJNZSdz4uS5w/edit#gid=0"
-                target="_blank">Inventario equipos SENA</a></p>
-            <p><a href="https://drive.google.com/drive/folders/17CbJaIMUpj6ij3qPWKaSFZYl4FMKLH0K"
-                target="_blank">Equipos Telefónica</a></p>
-            <p><a href="https://docs.google.com/spreadsheets/d/1Gkrzxi7PDzuKWsKCiyuJbIwLOeVs-iUZ/edit#gid=825014379"
-                target="_blank">Planilla CMDB para proveedores</a></p>
-            <p><a href="https://docs.google.com/spreadsheets/d/18SG_d1PxWvK0z5-CEhkcjbfM-3yLSVHM/edit#gid=925906342"
-                target="_blank">Reporte de Novedades Devolución y Reasignación</a></p>
-            <p><a href="https://drive.google.com/drive/folders/1-SOblIl1IcUrjnYo0MDcd0Sd5wyGbRvT"
-                target="_blank">Registro de asistencia</a></p>
-            <p><a href="https://docs.google.com/spreadsheets/d/1Vvo_aqN5fhZ43RByHkRFqz0OIqqSM7rfU7OEHfyPmlU/edit#gid=0"
-                target="_blank">WO-INC-TASK</a></p>
-            <p><a href="https://drive.google.com/drive/folders/1C8WPniWyiEBqyHq6j59-xO-HUJcKfc4a?usp=sharing"
-                target="_blank">Carpeta ID105</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            Bloqueos de pantalla negra
-          </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <h2>Check para tema de bloqueos</h2>
-            <ol>
-              <li>
-                <p>Eliminar historial de todos los navegadores incluyendo las contraseñas</p>
-              </li>
-              <li>
-                <p>Eliminar temporales con <strong>%temp%</strong> en <strong>CMD</strong></p>
-              </li>
-              <li>
-                <p>Correr un antimalware</p>
-              </li>
-              <li>
-                <p>Eliminar las credenciales ligadas a esa cuenta en el administrador de credenciales</p>
-              </li>
-              <li>
-                <p>Olvidar la red <strong>INTSENA</strong> de celulares y portátil.</p>
-              </li>
-              <li>
-                <p>Este procedimiento realizarlo en todos los equipos que la usuaria sepa que han iniciado su sesión y
-                  que estén en uso y de alguna manera puedan comunicarse con la el AD</p>
-              </li>
-              <li>
-                <p>Solicitar apoyo a Office 365 para que maten las sesiones del usuario.</p>
-              </li>
-              <li>
-                <p>En la consola cmd<strong>Gpupdate /force</strong> Como administrador (para garantizar que el equipo
-                  si se esté contactando con el dominio SENA.RED).</p>
-              </li>
-              <li>
-                <p>Los equipos en el dominio <strong>SENA.RED</strong> deben estar en la red institucional
-                  <strong>SENA</strong>.
-                </p>
-              </li>
-              <p>Con esto se garantiza que el equipo se desbloquee y no vuelva a suceder, si por alguna razón, al
-                realizar el paso a paso no funciona, comunicarse con office 365.</p>
-            </ol>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingSWProhibido">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseSWProhibido" aria-expanded="false" aria-controls="collapseSWProhibido">
-            Software prohibido
-          </button>
-        </h2>
-        <div id="collapseSWProhibido" class="accordion-collapse collapse" aria-labelledby="headingSWProhibido"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <img src="./src/img/SW-prohibido.jpeg" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFive">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-            Cuentas Telefónica
-          </button>
-        </h2>
-        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <h2>\\172.29.19.243</h2>
-            <table class="table">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">No.</th>
-                  <th scope="col">Usuario</th>
-                  <th scope="col">Contraseña</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>telef.mmartinez</td>
-                  <td>Colombia22336*</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>telef.wgarcia</td>
-                  <td>Colombia27908*</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>telef.matafurg</td>
-                  <td>Colombia26176*</td>
-                </tr>
-                <tr>
-                  <th scope="row">4</th>
-                  <td>telef.jvalenciar</td>
-                  <td>uwy3XX@0Ld1tYp</td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td>telef.jcaicedo</td>
-                  <td>6x6bgF?I9LtD$S</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
+      </nav>
+    </header>
+    <div>
+      <img id="img_banner" src="./src/img/tecnoparque-yamboro1.jpeg" alt="">
     </div>
   </div>
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"></a></li>
+      </ul>
+      <p class="text-center text-muted">&copy; 2022 empanada-soft, Inc</p>
+    </footer>
+  </div>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 </body>
-<script src="./src/js/plantillas.js"></script>
 
+<script src="./src/js/plantillas.js"></script>
 
 </html>
