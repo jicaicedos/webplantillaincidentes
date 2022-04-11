@@ -1,7 +1,24 @@
-body {
-    background-color: red;
+.ans {
+    display: flex;
 }
 
-.alto {
-    height: 70%;
+.ansform {
+    background-color: aqua;
 }
+.ansimg img {
+    width: 80%;
+    height: 60%;
+}
+
+@media only screen and (max-width: 600px) {
+    .ans {
+        display: block;
+    }
+    .ansimg img {
+        width: 100%;
+    }
+    .ansform {
+        display: inline;
+      background-color: rgb(202, 20, 20);
+    }
+  }
