@@ -10,6 +10,9 @@
     height: 60%;
 }
 
+textarea {
+    width: 80%;
+}
 @media only screen and (max-width: 600px) {
     .ans {
         display: block;
@@ -20,5 +23,8 @@
     .ansform {
         display: inline;
       background-color: rgb(202, 20, 20);
+    }
+    textarea {
+        width: -webkit-fill-available;
     }
   }
