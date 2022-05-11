@@ -1,7 +1,52 @@
-body {
-    background-color: red;
+/* Móvil */
+.menu {
+    display: block;
 }
 
-.alto {
-    height: 70%;
+.ans {
+    display: block;
 }
+.ansimg img {
+    width: 100%;  
+}
+.ansform {
+    display: inline;
+  background-color: rgb(202, 20, 20);
+}
+textarea {
+    width: -webkit-fill-available;
+}
+
+.imagen_lenovo_suport {
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+.img_sw_prohibido {
+    width: 20%;       
+}
+
+/* Pantalla */
+@media only screen and (min-width: 600px) {
+
+    .ans {
+        display: flex;
+    }
+
+    .ansform {
+        background-color: aqua;
+    }
+    .ansimg img {
+        width: 80%;
+        height: 60%;
+    }
+    
+    textarea {
+        width: 80%;
+    }
+
+    .img_sw_prohibido {
+        width: 70%;       
+    }
+    
+  }
