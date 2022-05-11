@@ -36,6 +36,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./comandos.html">Comandos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./smartec.html">SMARTEC</a>
             </li>            
             <li class="nav-item">
               <a class="nav-link"
@@ -66,6 +69,23 @@
     <br>
     <div class="card">
       <div class="card-header">
+        <h3>WLAN: Configuración</h3>
+      </div>
+      <div class="card-body">
+        <p>Por parte del equipo de WLAN se detectó que por actualizaciones de Windows 10, algunos equipos presentan
+          problemas, no están guardando la contraseña de las redes inalámbricas, esto sucede sobre todo en la red
+          APRENDIZSENA, para mitigar y solucionar el inconveniente. Por <strong>CMD</strong> ejecutar las siguientes sentencias:
+        </p>
+        <ul>
+          <li>reg add HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths /v \\*\SYSVOL /d "RequireMutualAuthentication=0" /t REG_SZ /f
+          </li>
+          <li>reg add HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths /v \\*\NETLOGON /d "RequireMutualAuthentication=0" /t REG_SZ /f</li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-header">
         <h4>Subir equipos al Dominios de Administrativos</h4>
       </div>
       <div class="card-body">
@@ -86,16 +106,19 @@
         </p>
         <ol>
           <li>
-            <p>Antes de iniciar la inscripción es necesario corroborar que la tarjeta de red tenga conexión estable (LAN o WLAN) y las configuraciones de DNS, IP y Proxy se encuentren en automático.</p>
+            <p>Antes de iniciar la inscripción es necesario corroborar que la tarjeta de red tenga conexión estable (LAN
+              o WLAN) y las configuraciones de DNS, IP y Proxy se encuentren en automático.</p>
           </li>
           <li>
-            <p>Verificar que el nombre de la máquina no se encuentre duplicado en el Directorio Activo (DA) para evitar conflictos con el SSID de las máquinas.</p>
+            <p>Verificar que el nombre de la máquina no se encuentre duplicado en el Directorio Activo (DA) para evitar
+              conflictos con el SSID de las máquinas.</p>
           </li>
           <li>
             <p>Tener credenciales de ingreso al dominio</p>
           </li>
           <li>
-            <p>Tener claridad del dominio al que se realizara la inscripción. Los equipos que se conectaran a <strong>INSTSENA</strong> deben ir a <strong>SENA.RED</strong></p>
+            <p>Tener claridad del dominio al que se realizara la inscripción. Los equipos que se conectaran a
+              <strong>INSTSENA</strong> deben ir a <strong>SENA.RED</strong></p>
           </li>
           <li>
             <p>Realizar la descripción del equipo en el dominio para facilitar la administración de este</p>
@@ -111,7 +134,8 @@
           </li>
         </ol>
         <p>
-          De presentarse algún inconveniente con la inscripción se debe establecer contacto con el equipo de Windows para su resolución.
+          De presentarse algún inconveniente con la inscripción se debe establecer contacto con el equipo de Windows
+          para su resolución.
         </p>
         <p>SAMUEL JULIAN ALDANA GOMEZ <strong>3138480385</strong></p>
         <div class="card">
@@ -119,7 +143,9 @@
             <h3>Nemonico</h3>
           </div>
           <div class="card-body">
-            <p>Por favor compartir  la informacion en los manuales y <a href="../public/Nemonico.xlsx"><strong>neumonico</strong></a> (archivo de como nombrar los equipos en el hostname)</p>
+            <p>Por favor compartir la informacion en los manuales y <a
+                href="../public/Nemonico.xlsx"><strong>neumonico</strong></a> (archivo de como nombrar los equipos en el
+              hostname)</p>
           </div>
         </div>
       </div>
