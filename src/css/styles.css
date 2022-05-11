@@ -1,3 +1,4 @@
+/* Móvil */
 .menu {
     display: block;
 }
@@ -6,7 +7,7 @@
     display: block;
 }
 .ansimg img {
-    width: 100%;
+    width: 100%;  
 }
 .ansform {
     display: inline;
@@ -16,6 +17,16 @@ textarea {
     width: -webkit-fill-available;
 }
 
+.imagen_lenovo_suport {
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+.img_sw_prohibido {
+    width: 20%;       
+}
+
+/* Pantalla */
 @media only screen and (min-width: 600px) {
 
     .ans {
@@ -34,4 +45,8 @@ textarea {
         width: 80%;
     }
 
+    .img_sw_prohibido {
+        width: 70%;       
+    }
+    
   }
