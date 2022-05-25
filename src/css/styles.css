@@ -7,14 +7,7 @@
     display: block;
 }
 .ansimg img {
-    width: 100%;  
-}
-.ansform {
-    display: inline;
-  background-color: rgb(202, 20, 20);
-}
-textarea {
-    width: -webkit-fill-available;
+    width: 80%;  
 }
 
 .imagen_lenovo_suport {
@@ -23,7 +16,12 @@ textarea {
 }
 
 .img_sw_prohibido {
-    width: 20%;       
+    width: 20%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Pantalla */
@@ -32,19 +30,12 @@ textarea {
     .ans {
         display: flex;
     }
-
     .ansform {
-        background-color: aqua;
+        width: 100%;
     }
-    .ansimg img {
-        width: 80%;
-        height: 60%;
-    }
-    
     textarea {
-        width: 80%;
-    }
-
+        width: 100%;
+    }    
     .img_sw_prohibido {
         width: 70%;       
     }

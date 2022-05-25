@@ -125,7 +125,7 @@
       </nav>  
     </header>
     <br>
-    <h1>Cumplimiento ANS 24 (Plantillas)</h1>    
+    <h1>Cumplimiento ANS 24 (Plantillas)</h1>
     <div class="card">
       <div class="card-header">
         <p><strong>AVANCE</strong></p>
@@ -134,17 +134,21 @@
         <div class="ans">
           <div class="ansimg">
             <img src="../public/ANS24-1avance.JPG" alt="">
-          </div>
-          <div class="ansform">
-            Referencia para redactar progresos del caso
-            <div class="nota-privada">
-              <p><strong>Nota privada</strong></p>
-            </div>
+          </div>          
+          <form  class="ansform">
             <div class="mensaje">
+              <h4>Nota privada</h4>
               <p>Se realizan los siguientes procesos:</p>
-              <textarea name="" id="" rows="3" placeholder="(descripción de pasos efectuados de manera detallada)"></textarea>
+              <textarea name="" class="form-control" id="txtaAvance" rows="3" placeholder="(descripción de pasos efectuados de manera detallada)"></textarea>
             </div>
-          </div>
+            <br>
+            <div class="form-group">
+              <button type="button" class="btn btn-primary" onclick="generarMensajeAvance()">Generar avance</button>
+            </div>
+            <br>
+            <h4>Resultado</h4>
+            <p class="alert alert-warning" id="msgFinalAvance"></p>
+          </form>
         </div>
       </div>
     </div>
@@ -154,15 +158,26 @@
         <p><strong>ESCALAMIENTO</strong></p>
       </div>
       <div class="card-body">
-        Plantilla para informar la creación y escalamiento del caso.
-        <div class="nota-privada">
-          <p><strong>Nota privada</strong></p>
-        </div>
-        <div class="mensaje">
-          <p>Cordial saludo, de acuerdo con la solicitud </p>
-          <textarea name="" id="" rows="3" placeholder="(indique al menos una)"></textarea>
-          <p>se escala el caso para </p>
-          <textarea name="" id="" rows="2" placeholder="(la respectiva gestión)"></textarea>
+        <div class="ans">
+          <div class="ansimg">
+            <img src="../public/ANS24-2escalamiento.JPG" alt="">
+          </div>
+          <form class="ansform">
+            <div class="mensaje">
+              <h4>Nota privada</h4>
+              <p>Cordial saludo, de acuerdo con la solicitud </p>
+              <textarea class="form-control" id="textaSolicitud" rows="2" placeholder="(indique al menos una)"></textarea>
+              <p>se escala el caso para </p>
+              <textarea class="form-control" id="txtaGestion" rows="2" placeholder="(la respectiva gestión)"></textarea>
+              <br>
+              <div class="form-group">
+                <button type="button" class="btn btn-primary" onclick="generarMensajeEscalamiento()">Generar escalamiento</button>
+              </div>
+            </div>
+            <br>
+            <h4>Resultado</h4>
+            <p class="alert alert-warning" id="msgFinalEscalamiento"></p>            
+          </form>
         </div>
       </div>
     </div>
@@ -172,25 +187,36 @@
         <p><strong>SOLUCIÓN</strong></p>
       </div>
       <div class="card-body">
-        Registro a detalle del proceso realizado y resultado de este.
-        <div class="nota-privada">
-          <p><strong>Nota pública</strong></p>
-        </div>
-        <div class="mensaje">
-          <p>Cordial saludo, para solucionar </p>
-          <textarea name="" id="" rows="2" placeholder="(título solicitud del usuario)"></textarea>
-          <p>se realizó verificación de </p>
-          <textarea name="" id="" rows="3" placeholder="(proceso realizado)"></textarea>
-          <p>. Se realizaron pruebas con el usuario, se ofreció asistencia adicional y se solicitó autorización para cierre del requerimiento.</p>
-          <p>El usuario <input name="" id="" placeholder="(nombre y apellido)" />
-          confirma la solución a satisfacción y autorizó el cierre del requerimiento.</p>
+        <div class="ans">
+          <div class="ansimg">
+            <img src="../public/ANS24-3solucion.JPG" alt="">
+          </div>          
+          <form class="ansform">
+            <div class="mensaje">
+              <h4>Nota pública</h4>
+              <p>Cordial saludo, para solucionar </p>
+              <textarea name="" id="txtaSolicitudUsuario" rows="2" placeholder="(título solicitud del usuario)"></textarea>
+              <p>se realizó verificación de </p>
+              <textarea name="" id="txtaProcesoRealizado" rows="3" placeholder="(proceso realizado)"></textarea>
+              <p>. Se realizaron pruebas con el usuario, se ofreció asistencia adicional y se solicitó autorización para cierre del requerimiento.</p>
+              <p>El usuario <input name="" id="txtNombreUsuario" placeholder="(nombre y apellido)" />
+              confirma la solución a satisfacción y autorizó el cierre del requerimiento.</p>
+              <div class="form-group">
+                <button type="button" class="btn btn-primary" onclick="generarMensajeSolucion()">Generar solución</button>
+              </div>
+            </div>
+            <br>
+            <h4>Resultado</h4>
+            <p class="alert alert-warning" id="msgFinalSolucion"></p>
+          </form>
         </div>
       </div>
     </div>
-    <br>
+    <!--
+    <br>    
     <div class="card">
       <div class="card-header">
-        <h3>WO</h3>
+        <h3>Orden de trabajo - WO</h3>
       </div>
       <div class="card-body">
         <p>Se realizan los siguientes procesos: Se procede a gestionar la solicitud.</p>
@@ -214,6 +240,7 @@
         <p class="alert alert-warning" id="mensajeFinal"></p>
       </div>
     </div>
+    -->
     <br>
     <div class="card">
       <div class="card-header">
@@ -261,16 +288,20 @@
   </div>
 </div>
 <div class="container">
-  <footer class="py-3 my-4">
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+  <footer class="py-3 my-4 footer">      
+    <!-- <ul class="nav justify-content-center border-bottom pb-3 mb-3">
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"></a></li>
-    </ul>
+    </ul> -->
     <div class="footer-img-empanada">
       <p>&copy; 2022 empanada-soft, Inc</p>
-      <strong>S</strong><img src="../src/img/empanada-soft.png" alt="" /><strong>FT</strong>
-    </div>
+      <strong>S</strong><img src="./src/img/empanada-soft.png" alt="" /><strong>FT</strong>
+      </div>
+      <div class="footer-img-empanada">
+        <p><strong>Email</strong></p>
+        <p>mesadeservicio@sena.edu.co</p>
+      </div>
   </footer>
-</div>
+</div> 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
