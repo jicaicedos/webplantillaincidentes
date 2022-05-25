@@ -6,6 +6,11 @@
 .ans {
     display: block;
 }
+
+.ansform {
+    width: 100%;
+}
+
 .ansimg img {
     width: 80%;  
 }
