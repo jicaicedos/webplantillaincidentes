@@ -7,12 +7,8 @@
     display: block;
 }
 
-.ansform {
-    width: 100%;
-}
-
 .ansimg img {
-    width: 80%;  
+    width: 100%;
 }
 
 .imagen_lenovo_suport {
@@ -29,14 +25,15 @@ footer {
     justify-content: space-between;
 }
 
+#img_banner {
+    width: 100%;
+    height: 10%;
+}
+
 /* Pantalla */
 @media only screen and (min-width: 600px) {
-
     .ans {
         display: flex;
-    }
-    .ansform {
-        width: 100%;
     }
     textarea {
         width: 100%;
@@ -44,5 +41,8 @@ footer {
     .img_sw_prohibido {
         width: 70%;       
     }
-    
-  }
+    .ansform {
+        padding-left: 1em;
+        width: 100%;
+    }
+}
