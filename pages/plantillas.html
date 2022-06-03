@@ -12,6 +12,7 @@
 
 <body>
   <div class="container">
+    <!-- menu -->
     <header>
       <nav class="navbar navbar-expand-sm navbar-light bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
@@ -20,7 +21,7 @@
         <!-- logo -->
         <a class="navbar-brand" href="#">
           <img src="../src/img/empanada-soft.png" width="30" height="30" alt="">
-        </a>        
+        </a>
         <div class="collapse navbar-collapse" id="opciones">
           <ul id="menu" class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -45,6 +46,9 @@
               <a class="nav-link" href="./comandos.html">Comandos</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="./mds.html">MDS</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="./smartec.html">SMARTEC</a>
             </li>
             <li class="nav-item">
@@ -57,12 +61,14 @@
               <button class="btn btn-outline-success" type="submit">Buscar</button>
             </form> -->
         </div>
-      </nav>     
+      </nav>
     </header>
   </div>
   <br>
-  <div class="container"> 
-
+  <div class="container">
+    <div>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quaerat repellat necessitatibus excepturi totam. Inventore omnis debitis deleniti culpa aliquid laudantium voluptate dicta sint minus. Necessitatibus quae delectus quam voluptatum?</p>
+    </div>
     <div class="card">
       <div class="card-header">
         <p><strong>AVANCE</strong></p>
@@ -71,15 +77,17 @@
         <div class="ans">
           <div class="ansimg">
             <img src="../public/ANS24-1avance.JPG" alt="">
-          </div>          
+          </div>
           <form class="ansform">
             <div class="mensaje">
               <h4>Nota privada</h4>
               <p>Se realizan los siguientes procesos:</p>
-              <textarea name="" class="form-control" id="txtaAvance" rows="3" placeholder="(descripción de pasos efectuados de manera detallada)"></textarea>  
+              <textarea name="" class="form-control" id="txtaAvance" rows="3"
+                placeholder="(descripción de pasos efectuados de manera detallada)"></textarea>
               <br>
               <div class="form-group">
-                <button type="button" class="btn btn-primary" onclick="generarMensajeAvance()">Generar avance</button>
+                <label for="btnMsgAvance"></label>
+                <button id="btnMsgAvance" type="button" class="btn btn-primary" onclick="generarMensajeAvance()">Generar avance</button>
               </div>
             </div>
             <br>
@@ -89,7 +97,7 @@
           </form>
         </div>
       </div>
-    </div>    
+    </div>
     <br>
     <div class="card">
       <div class="card-header">
@@ -104,17 +112,19 @@
             <div class="mensaje">
               <h4>Nota privada</h4>
               <p>Cordial saludo, de acuerdo con la solicitud </p>
-              <textarea class="form-control" id="textaSolicitud" rows="2" placeholder="(indique al menos una)"></textarea>
+              <textarea class="form-control" id="textaSolicitud" rows="2"
+                placeholder="(indique al menos una)"></textarea>
               <p>se escala el caso para </p>
               <textarea class="form-control" id="txtaGestion" rows="2" placeholder="(la respectiva gestión)"></textarea>
               <br>
               <div class="form-group">
-                <button type="button" class="btn btn-primary" onclick="generarMensajeEscalamiento()">Generar escalamiento</button>
+                <button type="button" class="btn btn-primary" onclick="generarMensajeEscalamiento()">Generar
+                  escalamiento</button>
               </div>
             </div>
             <br>
             <h4>Resultado</h4>
-            <p class="alert alert-warning" id="msgFinalEscalamiento"></p>            
+            <p class="alert alert-warning" id="msgFinalEscalamiento"></p>
           </form>
         </div>
       </div>
@@ -128,19 +138,23 @@
         <div class="ans">
           <div class="ansimg">
             <img src="../public/ANS24-3solucion.JPG" alt="">
-          </div>          
+          </div>
           <form class="ansform">
             <div class="mensaje">
               <h4>Nota pública</h4>
               <p>Cordial saludo, para solucionar </p>
-              <textarea name="" class="form-control" id="txtaSolicitudUsuario" rows="2" placeholder="(título solicitud del usuario)"></textarea>
+              <textarea name="" class="form-control" id="txtaSolicitudUsuario" rows="2"
+                placeholder="(título solicitud del usuario)"></textarea>
               <p>se realizó verificación de </p>
-              <textarea name=""class="form-control" id="txtaProcesoRealizado" rows="3" placeholder="(proceso realizado)"></textarea>
-              <p>. Se realizaron pruebas con el usuario, se ofreció asistencia adicional y se solicitó autorización para cierre del requerimiento.</p>
+              <textarea name="" class="form-control" id="txtaProcesoRealizado" rows="3"
+                placeholder="(proceso realizado)"></textarea>
+              <p>. Se realizaron pruebas con el usuario, se ofreció asistencia adicional y se solicitó autorización para
+                cierre del requerimiento.</p>
               <p>El usuario <input name="" id="txtNombreUsuario" placeholder="(nombre y apellido)" />
-              confirma la solución a satisfacción y autorizó el cierre del requerimiento.</p>
+                confirma la solución a satisfacción y autorizó el cierre del requerimiento.</p>
               <div class="form-group">
-                <button type="button" class="btn btn-primary" onclick="generarMensajeSolucion()">Generar solución</button>
+                <button type="button" class="btn btn-primary" onclick="generarMensajeSolucion()">Generar
+                  solución</button>
               </div>
             </div>
             <br>
@@ -224,32 +238,28 @@
       </div>
     </div>
   </div>
-</div>
-<div class="container">
-  <footer class="py-3 my-4 footer">      
-    <!-- <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"></a></li>
-    </ul> -->
-    <div class="footer-img-empanada">
-      <p>&copy; 2022 empanada-soft, Inc</p>
-      <strong>S</strong><img src="./src/img/empanada-soft.png" alt="" /><strong>FT</strong>
+  <!-- Footer -->
+  <div class="container">
+    <footer class="py-3 my-4 footer">
+      <div class="footer-img-empanada">
+        <p>&copy; 2022 empanada-soft, Inc</p>
+        <strong>S</strong><img src="./src/img/empanada-soft.png" alt="" /><strong>FT</strong>
       </div>
       <div class="footer-img-empanada">
         <p><strong>Email</strong></p>
         <p>mesadeservicio@sena.edu.co</p>
       </div>
-  </footer>
-</div> 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-crossorigin="anonymous"></script>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 </body>
-<script src="../src/js/plantillas.js"></script>
-
+  <script src="../src/js/plantillas.js"></script>
 </html>
