@@ -17,7 +17,7 @@
 }
 
 .img_sw_prohibido {
-    width: 20%;
+    width: 100%;
 }
 
 footer {
@@ -39,10 +39,11 @@ footer {
         width: 100%;
     }    
     .img_sw_prohibido {
-        width: 70%;       
+        width: 50%;       
     }
     .ansform {
         padding-left: 1em;
         width: 100%;
     }
+    
 }
