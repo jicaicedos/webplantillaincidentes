@@ -63,7 +63,7 @@ function generarMensajeSolucion() {
 
     let txtMsgSolucion = `Cordial saludo, para solucionar <strong>${txtaSolicitudUsuario}</strong> se realizó verificación de 
                         <strong>${txtaProcesoRealizado}</strong>. Se realizaron pruebas con el usuario, se ofreció asistencia adicional y se solicitó autorización para cierre del requerimiento.
-                         El usuario <strong>${txtNombreUsuario}</strong> confirma la solución a satisfacción y autorizó el cierre del requerimiento.`;
+                         <br>El usuario <strong>${txtNombreUsuario}</strong> confirma la solución a satisfacción y autorizó el cierre del requerimiento.`;
     
     document.getElementById("msgFinalSolucion").innerHTML = txtMsgSolucion;
 }
