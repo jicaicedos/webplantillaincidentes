@@ -153,8 +153,7 @@
               <p>El usuario <input name="" id="txtNombreUsuario" placeholder="(nombre y apellido)" />
                 confirma la solución a satisfacción y autorizó el cierre del requerimiento.</p>
               <div class="form-group">
-                <button type="button" class="btn btn-primary" onclick="generarMensajeSolucion()">Generar
-                  solución</button>
+                <button type="button" class="btn btn-primary" onclick="generarMensajeSolucion()">Generar solución</button>
               </div>
             </div>
             <br>
@@ -164,35 +163,33 @@
         </div>
       </div>
     </div>
-    <!--
+    
     <br>    
     <div class="card">
       <div class="card-header">
-        <h3>Orden de trabajo - WO</h3>
+        <h3>RESUMEN</h3>
       </div>
       <div class="card-body">
-        <p>Se realizan los siguientes procesos: Se procede a gestionar la solicitud.</p>
-        <hr>
         <h5 class="card-title">Mensaje</h5>
-        <form action="./mensaje.html" method="post">
-          <p id="texto">
-            <span id="texto1">Cordial saludo, para solucionar </span>
-            <input class="form-control" type="text" id="asunto" placeholder="Digitar asunto"><span id="texto2"> se
-              ejecutó verificación en sitio </span>
-            <textarea class="form-control" id="mensaje" rows="3"></textarea>
-            <span id="texto3">. Se realizaron pruebas con el usuario</span> <input type="text" id="usuario"
-              placeholder="Nombre del usuario" value=""><span id="texto4">, asistencia adicional al usuario, quien
-              confirma la solución a satisfacción y autorizó el cierre del requerimiento.</span>
+        <form action="" method="post" class="ansform">
+
+          <span id="texto1Resumen">Cordial saludo, para solucionar la solicitud de </span>
+          <input class="form-control" type="text" id="asuntoResumen" placeholder="Digitar asunto">
+
+          <span id="texto2Resumen">, se realizó las siguientes acciones: </span>
+          <textarea class="form-control" id="mensajeResumen" rows="3"></textarea>
+
+          <br>
           <div class="form-group">
-            <button type="button" class="btn btn-primary" onclick="generarMensaje()">Generar</button>
+            <button type="button" class="btn btn-primary" onclick="generarResumen()">Generar</button>
           </div>
-          </p>
+
         </form>
         <h4>Resultado</h4>
-        <p class="alert alert-warning" id="mensajeFinal"></p>
+        <p class="alert alert-warning" id="mensajeFinalResumen"></p>
       </div>
     </div>
-    -->
+    
     <br>
     <div class="card">
       <div class="card-header">
@@ -202,7 +199,7 @@
         <p>Se realizan los siguientes procesos: se procede a gestionar la solicitud.</p>
         <hr>
         <h4>Mensaje</h4>
-        <form action="">
+        <form action="" method="post" class="ansform">
           <p id="pendiente">
             <!-- texto1 -->
             <span id="pendiente1">Se realizan los siguientes procesos: se procede a validación el día de hoy </span>
@@ -243,7 +240,7 @@
     <footer class="py-3 my-4 footer">
       <div class="footer-img-empanada">
         <p>&copy; 2022 empanada-soft, Inc</p>
-        <strong>S</strong><img src="./src/img/empanada-soft.png" alt="" /><strong>FT</strong>
+        <strong>S</strong><img src="../src/img/empanada-soft.png" alt="" /><strong>FT</strong>
       </div>
       <div class="footer-img-empanada">
         <p><strong>Email</strong></p>
