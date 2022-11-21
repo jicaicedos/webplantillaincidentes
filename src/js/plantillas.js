@@ -68,7 +68,7 @@ function generarMensajeSolucion() {
     document.getElementById("msgFinalSolucion").innerHTML = txtMsgSolucion;
 }
 
-function generarResumen() {
+function generarResumenFinal() {
     console.log('generar Resumen...')
     let txtaSolicitudUsuario = document.getElementById("asuntoResumen").value;
     let txtaProcesoRealizado = document.getElementById("mensajeResumen").value;    
